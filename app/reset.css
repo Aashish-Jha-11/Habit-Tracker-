@@ -1,0 +1,22 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Fix for Framer Motion and other animation libraries */
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+/* Fix for SVG elements */
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
