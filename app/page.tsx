@@ -2,11 +2,8 @@
 
 import dynamic from 'next/dynamic';
 import '../app/globals.css';
-
-// Dynamic import with no SSR to avoid hydration issues with components 
-// that interact with the document object
 const HabitTracker = dynamic(
-  () => import('../habit-tracker'), 
+  () => import('../aashishjha-personal-analytics-habit-tracker'), 
   { ssr: false }
 );
 
