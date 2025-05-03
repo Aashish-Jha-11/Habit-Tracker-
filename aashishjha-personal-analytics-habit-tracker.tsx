@@ -1217,7 +1217,7 @@ const HabitTracker = () => {
                       key={`month-${idx}`}
                       className="col-span-7 text-center text-sm font-medium text-indigo-600 dark:text-indigo-400 py-2"
                     >
-                      {item.value}
+                      {item.value.toString()}
                     </div>
                   );
                 }
