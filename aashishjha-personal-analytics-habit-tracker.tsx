@@ -85,7 +85,7 @@ const HabitTracker = () => {
   const [userName, setUserName] = useState('Alex Johnson');
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [theme, setTheme] = useState('dark');
-  const settingsRef = useRef(null);
+  const settingsRef = useRef<HTMLDivElement | null>(null);
 
 
   const [historyData, setHistoryData] = useState(() => {
@@ -136,7 +136,7 @@ const HabitTracker = () => {
   useEffect(() => {
     // Close settings menu when clicking outside
     function handleClickOutside(event: MouseEvent) {
-      if (settingsRef.current && !settingsRef.current.contains(event.target as Node)) {
+      if (settingsRef.current && !(settingsRef.current as Node).contains(event.target as Node)) {
         setIsSettingsOpen(false);
       }
     }
